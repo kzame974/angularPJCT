@@ -146,6 +146,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "prj-angular"
+    }
+  },
+  "defaultProject": "prj-angular",
+  "cli": {
+    "analytics": false
+  }
 }
