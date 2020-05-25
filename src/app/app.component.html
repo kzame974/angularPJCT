@@ -1,12 +1,15 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div class="col-xs-12">
-      <h2>Mes appareils</h2>
+    <div class="col-lg-12">
+      <h2>Ma Zamalière</h2>
       <ul class="list-group">
         <app-appareil></app-appareil>
         <app-appareil></app-appareil>
         <app-appareil></app-appareil> 
       </ul>
+      <button class="btn btn-success mt-5" 
+      [disabled]="!isAuth"
+      (click)="onAllumer()">Tout allumer</button>
     </div>
   </div>
 </div>

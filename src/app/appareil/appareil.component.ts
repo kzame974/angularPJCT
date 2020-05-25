@@ -7,11 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppareilComponent implements OnInit {
 
-  appareilName= "J'aime fumer des gros pilons gras";
-
+  zamalName= "Mangue Karot";
+  appareilStatus= "éteint"
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  getStatus() {
+    return this.appareilStatus;
+  }
 }
