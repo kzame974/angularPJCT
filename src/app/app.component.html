@@ -3,9 +3,9 @@
     <div class="col-lg-12">
       <h2>Ma Zamalière</h2>
       <ul class="list-group">
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil> 
+        <app-appareil [zamalName]="zamalOne"[appareilStatus]="'éteint'"></app-appareil>
+        <app-appareil [zamalName]="zamalTwo"[appareilStatus]="'allumé'"></app-appareil>
+        <app-appareil [zamalName]="zamalThree"[appareilStatus]="'éteint'"></app-appareil> 
       </ul>
       <button class="btn btn-success mt-5" 
       [disabled]="!isAuth"

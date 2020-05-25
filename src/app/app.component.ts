@@ -5,7 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
+  zamalOne = "Mangue Karot";
+  zamalTwo = "Gros pilon gras";
+  zamalThree = "Bédo";
   isAuth= false;
   constructor() {
     setTimeout(
