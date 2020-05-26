@@ -1,4 +1,6 @@
-<li class="list-group-item">
-    <h4>Kalité : {{ zamalName }} -- Status : {{ getStatus() }}</h4>
-    <input type="text" class="form-control" [(ngModel)]="zamalName">
+<li [ngClass]="{'list-group-item':true,
+                'list-group-item-success':appareilStatus === 'allumé',
+                'list-group-item-danger':appareilStatus === 'éteint'}">
+    <h4 [ngStyle]="{color: getColor()}">Kalité : {{ zamalName }} -- Statut : {{ getStatus() }}</h4>
+    <input type="text" class="form-control" [(ngModel)]="appareilStatus">
 </li>

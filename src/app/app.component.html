@@ -2,10 +2,11 @@
   <div class="row">
     <div class="col-lg-12">
       <h2>Ma Zamalière</h2>
+      <p>Mise à jouir : {{lastUpdate | async | date: 'dd/MM/yyyy' }}</p>
       <ul class="list-group">
-        <app-appareil [zamalName]="zamalOne"[appareilStatus]="'éteint'"></app-appareil>
-        <app-appareil [zamalName]="zamalTwo"[appareilStatus]="'allumé'"></app-appareil>
-        <app-appareil [zamalName]="zamalThree"[appareilStatus]="'éteint'"></app-appareil> 
+        <app-appareil *ngFor="let zamal of zamals"
+        [zamalName]="zamal.name"
+        [appareilStatus]="zamal.status"></app-appareil>
       </ul>
       <button class="btn btn-success mt-5" 
       [disabled]="!isAuth"

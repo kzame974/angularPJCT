@@ -7,9 +7,33 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  zamalOne = "Mangue Karot";
-  zamalTwo = "Gros pilon gras";
-  zamalThree = "Bédo";
+  lastUpdate = new Promise(
+    (resolve, reject) => {
+
+      const date = new Date();
+      setTimeout(
+        () => {
+          resolve(date);
+        }, 2000
+      );
+    }
+  );
+  
+  zamals = [
+    {
+      name : "Mangue Karot",
+      status : "éteint"
+    },
+    {
+      name : "Gros pilon gras",
+      status : "allumé"
+    },
+    {
+      name : "Bédo",
+      status : "éteint"
+    }
+  ];
+
   isAuth= false;
   constructor() {
     setTimeout(
