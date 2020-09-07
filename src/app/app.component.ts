@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   lastUpdate = new Promise(
-    (resolve, reject) => {
+    (resolve) => {
 
       const date = new Date();
       setTimeout(
@@ -18,31 +18,31 @@ export class AppComponent {
       );
     }
   );
-  
-  zamals = [
+
+  stuffs = [
     {
-      name : "Mangue Karot",
-      status : "éteint"
+      name : 'Machine à laver',
+      status : 'éteint'
     },
     {
-      name : "Gros pilon gras",
-      status : "allumé"
+      name : 'Frigo',
+      status : 'allumé'
     },
     {
-      name : "Bédo",
-      status : "éteint"
+      name : 'Télévision',
+      status : 'éteint'
     }
   ];
 
-  isAuth= false;
+  isAuth = false;
   constructor() {
     setTimeout(
        () => {
-        this.isAuth =  true;  
+        this.isAuth =  true;
       }, 4000
     );
   }
   onAllumer() {
-    console.log("Donne ma limé");
+    console.log('Donne ma limé');
   }
 }
